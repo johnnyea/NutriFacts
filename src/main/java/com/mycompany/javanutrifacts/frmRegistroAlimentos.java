@@ -24,25 +24,21 @@ import javax.swing.table.TableColumnModel;
  *
  * @author johnn
  */
-public class frmRegistro extends javax.swing.JFrame {
+public class frmRegistroAlimentos extends javax.swing.JFrame {
     
     /**
-     * Creates new form frmRegistro
+     * Creates new form frmRegistroAlimentos
      */
     DefaultTableModel modelo=new DefaultTableModel();
     
-    public frmRegistro() {
+    public frmRegistroAlimentos() {
         initComponents();
+        this.setTitle("NUTRIFACTS");
+        this.setLocationRelativeTo(this);
         this.setLocationRelativeTo(this);
         this.setTitle("Registro de Alimentos");
-        verfoto(lblFondo, "images/Fondo.jpg");
+        //verfoto(lblFondo, "images/Fondo.jpg");
         Limpiar();
-        modelo.setColumnCount(6);
-        modelo.setRowCount(0);
-        String[] titulo={"NOMBRE","CLASIFICACION","ORIGEN","BENEFICIOS","RECOMENDACIONES","PREPARACION"};
-        modelo.setColumnIdentifiers(titulo);
-        tblDatos.setModel(modelo);
-        DisenoTabla();
         Font();
         
         
@@ -81,17 +77,13 @@ public class frmRegistro extends javax.swing.JFrame {
         btnAgregar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnRetornar = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tblDatos = new javax.swing.JTable();
         lblOrigenImg = new javax.swing.JLabel();
-        lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
-        setMaximumSize(new java.awt.Dimension(800, 600));
-        setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(815, 800));
-        setResizable(false);
+        setMaximumSize(new java.awt.Dimension(720, 720));
+        setMinimumSize(new java.awt.Dimension(720, 720));
+        setPreferredSize(new java.awt.Dimension(720, 720));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 61, -1, -1));
@@ -185,7 +177,7 @@ public class frmRegistro extends javax.swing.JFrame {
         getContentPane().add(cmbOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 200, -1, -1));
 
         btnAgregar.setBackground(new java.awt.Color(245, 245, 245));
-        btnAgregar.setText("AGREGAR");
+        btnAgregar.setText("GUARDAR");
         btnAgregar.setMaximumSize(new java.awt.Dimension(175, 50));
         btnAgregar.setMinimumSize(new java.awt.Dimension(175, 50));
         btnAgregar.setPreferredSize(new java.awt.Dimension(175, 50));
@@ -215,68 +207,11 @@ public class frmRegistro extends javax.swing.JFrame {
         });
         getContentPane().add(btnRetornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 415, -1, -1));
 
-        jScrollPane4.setMaximumSize(new java.awt.Dimension(750, 250));
-        jScrollPane4.setMinimumSize(new java.awt.Dimension(750, 250));
-        jScrollPane4.setPreferredSize(new java.awt.Dimension(750, 250));
-
-        tblDatos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "NOMBRE", "CLASIFICACION", "ORIGEN", "BENEFICIOS", "RECOMENDACIONES", "PREPARACION"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tblDatos.setMaximumSize(new java.awt.Dimension(600, 200));
-        tblDatos.setMinimumSize(new java.awt.Dimension(600, 200));
-        tblDatos.setPreferredSize(new java.awt.Dimension(200, 600));
-        jScrollPane4.setViewportView(tblDatos);
-        if (tblDatos.getColumnModel().getColumnCount() > 0) {
-            tblDatos.getColumnModel().getColumn(0).setMinWidth(100);
-            tblDatos.getColumnModel().getColumn(0).setPreferredWidth(100);
-            tblDatos.getColumnModel().getColumn(0).setMaxWidth(100);
-            tblDatos.getColumnModel().getColumn(1).setMinWidth(100);
-            tblDatos.getColumnModel().getColumn(1).setPreferredWidth(100);
-            tblDatos.getColumnModel().getColumn(1).setMaxWidth(100);
-            tblDatos.getColumnModel().getColumn(2).setMinWidth(100);
-            tblDatos.getColumnModel().getColumn(2).setPreferredWidth(100);
-            tblDatos.getColumnModel().getColumn(2).setMaxWidth(100);
-            tblDatos.getColumnModel().getColumn(3).setMinWidth(150);
-            tblDatos.getColumnModel().getColumn(3).setPreferredWidth(150);
-            tblDatos.getColumnModel().getColumn(3).setMaxWidth(150);
-            tblDatos.getColumnModel().getColumn(4).setMinWidth(150);
-            tblDatos.getColumnModel().getColumn(4).setPreferredWidth(150);
-            tblDatos.getColumnModel().getColumn(4).setMaxWidth(150);
-            tblDatos.getColumnModel().getColumn(5).setMinWidth(150);
-            tblDatos.getColumnModel().getColumn(5).setPreferredWidth(150);
-            tblDatos.getColumnModel().getColumn(5).setMaxWidth(150);
-        }
-
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 475, 750, 250));
-
         lblOrigenImg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblOrigenImg.setMaximumSize(new java.awt.Dimension(175, 175));
         lblOrigenImg.setMinimumSize(new java.awt.Dimension(175, 175));
         lblOrigenImg.setPreferredSize(new java.awt.Dimension(175, 175));
         getContentPane().add(lblOrigenImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, -1, -1));
-
-        lblFondo.setPreferredSize(new java.awt.Dimension(800, 760));
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -339,27 +274,6 @@ public class frmRegistro extends javax.swing.JFrame {
     txtNombreAlimento.requestFocus();
     }
     
-    void DisenoTabla(){
-        tblDatos.getTableHeader().setFont(new Font("SansSerif", Font.BOLD, 14));
-        
-        tblDatos.getColumnModel().getColumn(0).setPreferredWidth(40);
-        tblDatos.getColumnModel().getColumn(1).setPreferredWidth(80);
-        tblDatos.getColumnModel().getColumn(2).setPreferredWidth(40);
-        tblDatos.getColumnModel().getColumn(3).setPreferredWidth(100);
-        tblDatos.getColumnModel().getColumn(4).setPreferredWidth(120);
-        tblDatos.getColumnModel().getColumn(5).setPreferredWidth(100);
-        
-        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        renderer.setHorizontalAlignment(SwingConstants.CENTER);
-        tblDatos.getColumnModel().getColumn(0).setCellRenderer(renderer);
-        tblDatos.getColumnModel().getColumn(1).setCellRenderer(renderer);
-        tblDatos.getColumnModel().getColumn(2).setCellRenderer(renderer);
-        tblDatos.getColumnModel().getColumn(3).setCellRenderer(renderer);
-        tblDatos.getColumnModel().getColumn(4).setCellRenderer(renderer);
-        tblDatos.getColumnModel().getColumn(5).setCellRenderer(renderer);
-        
-        tblDatos.getTableHeader().setForeground(new Color(0,102,102));
-    }
     
     void Font(){
         //Fuente
@@ -397,22 +311,19 @@ public class frmRegistro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistroAlimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistroAlimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistroAlimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistroAlimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmRegistro().setVisible(true);
-            }
-        });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -426,17 +337,14 @@ public class frmRegistro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lblBeneficios;
     private javax.swing.JLabel lblClasificacion;
     private javax.swing.JLabel lblClasificacionImg;
-    private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblOrigen;
     private javax.swing.JLabel lblOrigenImg;
     private javax.swing.JLabel lblPreparacion;
     private javax.swing.JLabel lblRecomendaciones;
-    private javax.swing.JTable tblDatos;
     private javax.swing.JTextArea txtBeneficios;
     private javax.swing.JTextField txtNombreAlimento;
     private javax.swing.JTextArea txtPreparacion;
