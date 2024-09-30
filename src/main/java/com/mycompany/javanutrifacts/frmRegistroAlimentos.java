@@ -101,12 +101,12 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("REGISTRO DE ALIMENTOS");
+        jLabel1.setText("REGISTRO DE ALIMENTOS NUTRICIONALES");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 50));
         jLabel1.setMinimumSize(new java.awt.Dimension(500, 50));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 40));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 15, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 540, -1));
 
         lblNombre.setText("NOMBRE DE ALIMENTO:");
         lblNombre.setMaximumSize(new java.awt.Dimension(175, 25));
