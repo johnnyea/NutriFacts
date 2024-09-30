@@ -44,6 +44,10 @@ public class frmMenu extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(480, 480));
+        setMinimumSize(new java.awt.Dimension(480, 480));
+        setPreferredSize(new java.awt.Dimension(480, 480));
+        setSize(new java.awt.Dimension(480, 480));
 
         jMenu1.setText("Alimentos");
 
