@@ -56,18 +56,16 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rdgBeneficios = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
         lblClasificacion = new javax.swing.JLabel();
         lblOrigen = new javax.swing.JLabel();
-        lblBeneficios = new javax.swing.JLabel();
         lblRecomendaciones = new javax.swing.JLabel();
         lblPreparacion = new javax.swing.JLabel();
         lblClasificacionImg = new javax.swing.JLabel();
         txtNombreAlimento = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtBeneficios = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtRecomendaciones = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -78,103 +76,109 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
         btnRetornar = new javax.swing.JButton();
         lblOrigenImg = new javax.swing.JLabel();
+        btnSubirFoto = new javax.swing.JButton();
+        lblAlimento = new javax.swing.JLabel();
+        rbtnBeneficio1 = new javax.swing.JRadioButton();
+        rbtnBeneficio2 = new javax.swing.JRadioButton();
+        rbtnBeneficio3 = new javax.swing.JRadioButton();
+        rbtnBeneficio4 = new javax.swing.JRadioButton();
+        rbtnBeneficio5 = new javax.swing.JRadioButton();
+        rbtnBeneficio6 = new javax.swing.JRadioButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setMaximumSize(new java.awt.Dimension(720, 720));
         setMinimumSize(new java.awt.Dimension(720, 720));
         setPreferredSize(new java.awt.Dimension(720, 720));
+        setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 61, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("REGISTRO DE ALIMENTOS");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel1.setPreferredSize(new java.awt.Dimension(600, 50));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 25, -1, -1));
+        jLabel1.setMaximumSize(new java.awt.Dimension(500, 50));
+        jLabel1.setMinimumSize(new java.awt.Dimension(500, 50));
+        jLabel1.setPreferredSize(new java.awt.Dimension(500, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 15, -1, -1));
 
         lblNombre.setText("NOMBRE DE ALIMENTO:");
-        lblNombre.setMaximumSize(new java.awt.Dimension(150, 25));
-        lblNombre.setMinimumSize(new java.awt.Dimension(150, 25));
+        lblNombre.setMaximumSize(new java.awt.Dimension(175, 25));
+        lblNombre.setMinimumSize(new java.awt.Dimension(175, 25));
         lblNombre.setName(""); // NOI18N
-        lblNombre.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
+        lblNombre.setPreferredSize(new java.awt.Dimension(175, 25));
+        getContentPane().add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
         lblClasificacion.setText("CLASIFICACION:");
         lblClasificacion.setMaximumSize(new java.awt.Dimension(150, 25));
         lblClasificacion.setMinimumSize(new java.awt.Dimension(150, 25));
         lblClasificacion.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
+        getContentPane().add(lblClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, -1, -1));
 
         lblOrigen.setText("ORIGEN:");
         lblOrigen.setMaximumSize(new java.awt.Dimension(150, 25));
         lblOrigen.setMinimumSize(new java.awt.Dimension(150, 25));
         lblOrigen.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
-
-        lblBeneficios.setText("BENEFICIOS:");
-        lblBeneficios.setMaximumSize(new java.awt.Dimension(150, 25));
-        lblBeneficios.setMinimumSize(new java.awt.Dimension(150, 25));
-        lblBeneficios.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblBeneficios, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 250, -1, -1));
+        getContentPane().add(lblOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, -1));
 
         lblRecomendaciones.setText("RECOMENDACIONES:");
         lblRecomendaciones.setMaximumSize(new java.awt.Dimension(150, 25));
         lblRecomendaciones.setMinimumSize(new java.awt.Dimension(150, 25));
         lblRecomendaciones.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblRecomendaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 325, -1, -1));
+        getContentPane().add(lblRecomendaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 455, -1, -1));
 
         lblPreparacion.setText("PREPARACION:");
         lblPreparacion.setMaximumSize(new java.awt.Dimension(150, 25));
         lblPreparacion.setMinimumSize(new java.awt.Dimension(150, 25));
         lblPreparacion.setPreferredSize(new java.awt.Dimension(150, 25));
-        getContentPane().add(lblPreparacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 400, -1, -1));
+        getContentPane().add(lblPreparacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 525, -1, -1));
 
         lblClasificacionImg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblClasificacionImg.setPreferredSize(new java.awt.Dimension(150, 125));
-        getContentPane().add(lblClasificacionImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 100, -1, -1));
+        lblClasificacionImg.setPreferredSize(new java.awt.Dimension(128, 128));
+        getContentPane().add(lblClasificacionImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
 
         txtNombreAlimento.setPreferredSize(new java.awt.Dimension(200, 25));
-        getContentPane().add(txtNombreAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 100, -1, -1));
-
-        txtBeneficios.setColumns(33);
-        txtBeneficios.setRows(3);
-        jScrollPane1.setViewportView(txtBeneficios);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        getContentPane().add(txtNombreAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 105, -1, -1));
 
         txtRecomendaciones.setColumns(33);
         txtRecomendaciones.setRows(3);
         jScrollPane2.setViewportView(txtRecomendaciones);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 325, -1, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 455, -1, -1));
 
         txtPreparacion.setColumns(33);
         txtPreparacion.setRows(3);
         jScrollPane3.setViewportView(txtPreparacion);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, -1, -1));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 525, -1, -1));
 
-        cmbClasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Frutas", "Verduras", "Proteinas", "Granos", "Lacteos" }));
+        cmbClasificacion.setMaximumRowCount(4);
+        cmbClasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Frutas", "Verduras", "Proteinas", "Granos", "Lacteos" }));
         cmbClasificacion.setPreferredSize(new java.awt.Dimension(200, 25));
         cmbClasificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbClasificacionActionPerformed(evt);
             }
         });
-        getContentPane().add(cmbClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 150, -1, -1));
+        getContentPane().add(cmbClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 105, -1, -1));
 
-        cmbOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asia", "Africa", "Europa", "America del Norte", "America del Sur", "Oceania" }));
+        cmbOrigen.setMaximumRowCount(4);
+        cmbOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Asia", "Africa", "Europa", "America del Norte", "America del Sur", "Oceania" }));
+        cmbOrigen.setMaximumSize(new java.awt.Dimension(200, 25));
+        cmbOrigen.setMinimumSize(new java.awt.Dimension(200, 25));
         cmbOrigen.setPreferredSize(new java.awt.Dimension(200, 25));
         cmbOrigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbOrigenActionPerformed(evt);
             }
         });
-        getContentPane().add(cmbOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 200, -1, -1));
+        getContentPane().add(cmbOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 235, -1, -1));
 
         btnAgregar.setBackground(new java.awt.Color(245, 245, 245));
         btnAgregar.setText("GUARDAR");
@@ -186,14 +190,14 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 295, -1, -1));
+        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 615, -1, -1));
 
         btnLimpiar.setBackground(new java.awt.Color(245, 245, 245));
         btnLimpiar.setText("LIMPIAR");
         btnLimpiar.setMaximumSize(new java.awt.Dimension(175, 50));
         btnLimpiar.setMinimumSize(new java.awt.Dimension(175, 50));
         btnLimpiar.setPreferredSize(new java.awt.Dimension(175, 50));
-        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 355, -1, -1));
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 615, -1, -1));
 
         btnRetornar.setBackground(new java.awt.Color(245, 245, 245));
         btnRetornar.setText("RETORNAR");
@@ -205,26 +209,84 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
                 btnRetornarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRetornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 415, -1, -1));
+        getContentPane().add(btnRetornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 615, -1, -1));
 
         lblOrigenImg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblOrigenImg.setMaximumSize(new java.awt.Dimension(175, 175));
         lblOrigenImg.setMinimumSize(new java.awt.Dimension(175, 175));
-        lblOrigenImg.setPreferredSize(new java.awt.Dimension(175, 175));
-        getContentPane().add(lblOrigenImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, -1, -1));
+        lblOrigenImg.setPreferredSize(new java.awt.Dimension(128, 128));
+        getContentPane().add(lblOrigenImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, -1, -1));
+
+        btnSubirFoto.setText("SUBIR FOTO");
+        btnSubirFoto.setMaximumSize(new java.awt.Dimension(175, 50));
+        btnSubirFoto.setMinimumSize(new java.awt.Dimension(175, 50));
+        btnSubirFoto.setPreferredSize(new java.awt.Dimension(175, 50));
+        getContentPane().add(btnSubirFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 280, -1, -1));
+
+        lblAlimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblAlimento.setMaximumSize(new java.awt.Dimension(128, 128));
+        lblAlimento.setMinimumSize(new java.awt.Dimension(128, 128));
+        lblAlimento.setPreferredSize(new java.awt.Dimension(128, 128));
+        getContentPane().add(lblAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
+        rdgBeneficios.add(rbtnBeneficio1);
+        rbtnBeneficio1.setText("Proporciona energía y fuerza ");
+        getContentPane().add(rbtnBeneficio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 385, -1, -1));
+
+        rbtnBeneficio2.setText("Fortalece el sistema inmunológico");
+        getContentPane().add(rbtnBeneficio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 405, -1, -1));
+
+        rbtnBeneficio3.setText("Mejora la salud ósea y dental ");
+        getContentPane().add(rbtnBeneficio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 425, -1, -1));
+
+        rbtnBeneficio4.setText("Regula el metabolismo y el peso ");
+        getContentPane().add(rbtnBeneficio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 385, -1, -1));
+
+        rbtnBeneficio5.setText("Mejora el estado de ánimo y reducen el estrés");
+        getContentPane().add(rbtnBeneficio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 405, -1, -1));
+
+        rbtnBeneficio6.setText("Protege contra enfermedades crónicas.  ");
+        getContentPane().add(rbtnBeneficio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 425, -1, -1));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BENEFICIOS", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(0, 102, 102))); // NOI18N
+        jPanel3.setForeground(new java.awt.Color(0, 102, 102));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 365, 640, 90));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS GENERALES", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(0, 102, 102))); // NOI18N
+        jPanel1.setForeground(new java.awt.Color(0, 102, 102));
+        jPanel1.setMaximumSize(new java.awt.Dimension(680, 450));
+        jPanel1.setMinimumSize(new java.awt.Dimension(680, 450));
+        jPanel1.setName(""); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(680, 450));
+        jPanel1.setRequestFocusEnabled(false);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 670, 290));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DATOS ADICIONALES", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(0, 102, 102))); // NOI18N
+        jPanel2.setForeground(new java.awt.Color(0, 102, 102));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 670, 260));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         
+        String clasificacion = "";
+        String origen = "";
+        
         String nombreA=txtNombreAlimento.getText();
-        String beneficios=txtBeneficios.getText();
         String recomendaciones=txtRecomendaciones.getText();
         String preparacion=txtPreparacion.getText();
-        String clasificacion=cmbClasificacion.getSelectedItem().toString();
-        String origen=cmbOrigen.getSelectedItem().toString();
-        modelo.addRow(new Object[]{nombreA,clasificacion,origen,beneficios,recomendaciones,preparacion});
+        if( cmbClasificacion.getSelectedIndex()== 0){
+             clasificacion = "Frutas";
+        }else  {
+             clasificacion=cmbClasificacion.getSelectedItem().toString();
+        }
+        if( cmbClasificacion.getSelectedIndex()== 0){
+             origen = "Asia";
+        }else  {
+             origen=cmbOrigen.getSelectedItem().toString();
+        }
+        modelo.addRow(new Object[]{nombreA,clasificacion,origen,recomendaciones,preparacion});
         Limpiar();
     }//GEN-LAST:event_btnAgregarActionPerformed
 
@@ -267,7 +329,6 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
     txtNombreAlimento.setText("");
     cmbClasificacion.setSelectedIndex(0);
     cmbOrigen.setSelectedIndex(0);
-    txtBeneficios.setText("");
     txtRecomendaciones.setText("");
     txtPreparacion.setText("");
     
@@ -280,21 +341,36 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         lblNombre.setFont(new Font("SansSerif", Font.BOLD, 14));
         lblClasificacion.setFont(new Font("SansSerif", Font.BOLD, 14));
         lblOrigen.setFont(new Font("SansSerif", Font.BOLD, 14));
-        lblBeneficios.setFont(new Font("SansSerif", Font.BOLD, 14));
         lblRecomendaciones.setFont(new Font("SansSerif", Font.BOLD, 14));
         lblPreparacion.setFont(new Font("SansSerif", Font.BOLD, 14));
         
         btnAgregar.setFont(new Font("SansSerif", Font.BOLD, 14));
         btnLimpiar.setFont(new Font("SansSerif", Font.BOLD, 14));
         btnRetornar.setFont(new Font("SansSerif", Font.BOLD, 14));
+        btnSubirFoto.setFont(new Font("SansSerif", Font.BOLD, 14));
         
         //Color
         lblNombre.setForeground(new Color(0,102,102));
         lblClasificacion.setForeground(new Color(0,102,102));
         lblOrigen.setForeground(new Color(0,102,102));
-        lblBeneficios.setForeground(new Color(0,102,102));
         lblRecomendaciones.setForeground(new Color(0,102,102));
         lblPreparacion.setForeground(new Color(0,102,102));
+        
+        rbtnBeneficio1.setFont(new Font("SansSerif", Font.BOLD, 12));
+        rbtnBeneficio2.setFont(new Font("SansSerif", Font.BOLD, 12));
+        rbtnBeneficio3.setFont(new Font("SansSerif", Font.BOLD, 12));
+        rbtnBeneficio4.setFont(new Font("SansSerif", Font.BOLD, 12));
+        rbtnBeneficio5.setFont(new Font("SansSerif", Font.BOLD, 12));
+        rbtnBeneficio6.setFont(new Font("SansSerif", Font.BOLD, 12));
+        
+        
+        jPanel1.setForeground(new Color(0,102,102));
+        jPanel2.setForeground(new Color(0,102,102));
+        jPanel3.setForeground(new Color(0,102,102));
+        
+        jPanel1.setFont(new Font("SansSerif", Font.BOLD, 12));
+        jPanel2.setFont(new Font("SansSerif", Font.BOLD, 12));
+        jPanel3.setFont(new Font("SansSerif", Font.BOLD, 12));
     }
     
     public static void main(String args[]) {
@@ -330,14 +406,17 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnRetornar;
+    private javax.swing.JButton btnSubirFoto;
     private javax.swing.JComboBox<String> cmbClasificacion;
     private javax.swing.JComboBox<String> cmbOrigen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JLabel lblBeneficios;
+    private javax.swing.JLabel lblAlimento;
     private javax.swing.JLabel lblClasificacion;
     private javax.swing.JLabel lblClasificacionImg;
     private javax.swing.JLabel lblNombre;
@@ -345,7 +424,13 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
     private javax.swing.JLabel lblOrigenImg;
     private javax.swing.JLabel lblPreparacion;
     private javax.swing.JLabel lblRecomendaciones;
-    private javax.swing.JTextArea txtBeneficios;
+    private javax.swing.JRadioButton rbtnBeneficio1;
+    private javax.swing.JRadioButton rbtnBeneficio2;
+    private javax.swing.JRadioButton rbtnBeneficio3;
+    private javax.swing.JRadioButton rbtnBeneficio4;
+    private javax.swing.JRadioButton rbtnBeneficio5;
+    private javax.swing.JRadioButton rbtnBeneficio6;
+    private javax.swing.ButtonGroup rdgBeneficios;
     private javax.swing.JTextField txtNombreAlimento;
     private javax.swing.JTextArea txtPreparacion;
     private javax.swing.JTextArea txtRecomendaciones;
