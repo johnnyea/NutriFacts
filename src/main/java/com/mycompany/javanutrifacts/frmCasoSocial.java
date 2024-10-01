@@ -4,6 +4,10 @@
  */
 package com.mycompany.javanutrifacts;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +23,8 @@ public class frmCasoSocial extends javax.swing.JFrame {
         initComponents();
         this.setTitle("NUTRIFACTS");
         this.setLocationRelativeTo(this);
+        txtInfo.setLineWrap(true);
+        
     }
 
     /**
@@ -31,8 +37,26 @@ public class frmCasoSocial extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        lblDepartamento = new javax.swing.JLabel();
+        lblCaso = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtInfo = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        cmbRegiones = new javax.swing.JComboBox<>();
+        cmbDepartamento = new javax.swing.JComboBox<>();
+        btnLimpiar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(720, 720));
+        setMinimumSize(new java.awt.Dimension(720, 720));
+        setPreferredSize(new java.awt.Dimension(720, 720));
+        setResizable(false);
+        setSize(new java.awt.Dimension(720, 720));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Retornar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -40,23 +64,71 @@ public class frmCasoSocial extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 520, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(315, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        lblDepartamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblDepartamento.setPreferredSize(new java.awt.Dimension(150, 150));
+        getContentPane().add(lblDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
+
+        lblCaso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblCaso.setPreferredSize(new java.awt.Dimension(150, 150));
+        getContentPane().add(lblCaso, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
+
+        txtInfo.setColumns(20);
+        txtInfo.setRows(5);
+        jScrollPane1.setViewportView(txtInfo);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 370, 420));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Caso Social: Desnutricion en el Perú");
+        jLabel3.setMaximumSize(new java.awt.Dimension(300, 40));
+        jLabel3.setMinimumSize(new java.awt.Dimension(300, 40));
+        jLabel3.setPreferredSize(new java.awt.Dimension(300, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Seleccione Caso"));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cmbRegiones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Costa", "Sierra", "Selva" }));
+        cmbRegiones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbRegionesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmbRegiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        cmbDepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Apurimac", "Loreto", "Callao" }));
+        cmbDepartamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbDepartamentoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmbDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
+
+        jLabel4.setText("Region");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+
+        jLabel5.setText("Departamento");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 280, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -65,10 +137,104 @@ public class frmCasoSocial extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, msg);
     }
     
+    void verfoto (JLabel imagen,String cad){
+        int ancho =imagen.getWidth();
+        int alto =imagen.getHeight();
+        ImageIcon foto=new ImageIcon(cad);
+        Icon icono=new ImageIcon(foto.getImage().getScaledInstance(ancho,alto,Image.SCALE_DEFAULT));
+        imagen.setIcon(icono);
+    }
+    
+    void Limpiar(){
+        cmbRegiones.setSelectedIndex(0);
+        cmbDepartamento.setSelectedIndex(0);
+    }   
+    
+    void Font(){
+       ;
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         msg("Gracias por revisar el caso social...");
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void cmbRegionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbRegionesActionPerformed
+        //String rRegiones="images/"+cmbRegiones.getSelectedItem().toString()+".jpg";
+        //verfoto(lblRegion, rRegiones);
+        
+        //Logica
+    }//GEN-LAST:event_cmbRegionesActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String regiones,departamento;
+        
+        if( cmbRegiones.getSelectedIndex()== 0){
+             regiones = "Costa";
+        }else  {
+             regiones=cmbRegiones.getSelectedItem().toString();
+        }
+        if( cmbDepartamento.getSelectedIndex()== 0){
+             departamento = "Callao";
+        }else  {
+             departamento=cmbDepartamento.getSelectedItem().toString();
+        }
+        
+        
+        switch (regiones) {
+            case "Costa":
+                if(departamento == "Callao")txtInfo.setText("En la Región Callao el 43.8% de menores de 36 meses tiene anemia y el 5.9% de los menores de 59 meses sufre desnutrición crónica, estos porcentajes exige una intervención inmediata. Por lo cual, el Gobierno Nacional ha puesto como objetivo reducir al 19% por medio del Plan Nacional de lucha contra la anemia (2017 -2021), que viene trabajando la Dirección Regional de Salud del Callao en los 45 establecimientos de Salud, Hospital Nacional Daniel A. Carrión, Hospital San José y Hospital de Ventanilla. Asimismo, se coordina con EsSalud, Sanidades de los Municipios Provincial y distrital. Así como la Sanidad de la Marina de Guerra del Perú y Sanidad de la Policía Nacional del Perú. Según declaraciones del Director General (e) de la Dirección Regional de Salud del Callao, doctor Jaime Chávez Herrera, la anemia es una enfermedad silenciosa que ataca a muchos peruanos y se presenta cuando la hemoglobina en la sangre ha disminuido debido a la deficiencia de hierro en el organismo. La anemia y desnutrición crónica son tan elevadas en los niños chalacos por la pobre ingesta de alimentos ricos en hierro a partir de los seis meses de edad, especialmente los de origen animal. Déficit entre el consumo de alimentos ricos en hierro y las necesidades nutricionales de 6 a 18 meses. Reducción de la lactancia materna exclusiva, señaló el doctor Chávez. Asimismo, la baja adherencia a la suplementación y altas necesidades de hierro en la gestación, bajas reservas de hierro en niños prematuros y de bajo peso al nacer, altas tasas de infecciones, diarreas, parasitosis, pobre saneamiento básico y prácticas de higiene no adecuadas y acceso limitado al paquete completo de cuidado integral de la salud. En este sentido, la Dirección Regional de Salud del Callao, en el marco de los lineamientos nacionales, viene fortaleciendo la suplementación preventiva con hierro y su tratamiento oportuno a todos los menores antes de los 36 meses de edad, reactivar los establecimientos amigos de la madre y el niño (lactancia materna exclusiva), control del niño sano, mejorar las prácticas de alimentación y nutrición, vacunas y un rol intersectorial para el abordaje de niñas y niños del Callao.");
+                break;
+            case "Sierra":
+                if(departamento == "Apurimac")txtInfo.setText("El departamento de la sierra sur presenta una situación grave, según el último informe Índice Global del Hambre en el Perú. También un aumento de casos de anemia y desnutrición\n"+
+                                                              "En un último diagnóstico sobre seguridad alimentaria del país, Apurímac registra el peor índice de hambre en el país con 32,8 puntos. Además, su situación podría empeorar\n"+
+                                                              "hasta ser calificada como “alarmante” debido a la recesión económica vigente y la crisis climática que afecta las producciones agrícolas, según proyecciones de siete\n"+ 
+                                                               "organizaciones nogubernamentales europeas dedicadas a la reducción de la pobreza publicadas en el Índice Global del Hambre en el Perú.\n"+
+                                                              "Las estadísticas actuales exponen la necesidad crítica de intervenciones en políticas nutricionales, agrícolas y de salud más efectivas en Apurímac. La lucha contra el hambre\n"+
+                                                              "la anemia y la desnutrición no es solo una cuestión de atención médica individual, sino parte de un desafío más amplio que exige un compromiso multisectorial para mejorar \n"+
+                                                              "la calidad de vida y las perspectivas futuras de los niños de la región.\n"+
+                                                              "Loreto En la actualidad, en Loreto viven 409,026 niñas, niños y adolescentes, que representan el 38% del total de la población en el departamento.\n"+
+                                                              "Para el 2021, se estima que el 41.5% de la niñez y adolescencia de esta región se encontraba en situación de pobreza\n"+
+                                                              "En el caso de la desnutrición crónica, el promedio nacional es de 11.7% pero en esta región, alcanza al 21.7%. \n"+
+                                                              "Otra de las cifras que lleva a este compromiso es el referido a la vacunación en niños y niñas menores de un año. A nivel nacional la cifra es de 69.6%, \n"+
+                                                              "pero en Loreto baja a 49.1%, convirtiéndose en la segunda región, después de Puno, en tener el índice más bajo de vacunación. Sobre agua y saneamiento,\n"+
+                                                              "de acuerdo con el Censo Escolar del Ministerio de Educación 2022, las escuelas públicas con los tres servicios básicos: agua, desagüe y electricidad llega \n"+
+                                                              " a nivel nacional a 29.2% mientras que en Loreto apenas cuentan con estos servicios básicos el 6.1% de las escuelas. \n"+
+                                                              "En el caso de las y los adolescentes, que representan el 33% de la población, la declaración firmada permitirá trabajar para que ellos y ellas cuenten\n"+
+                                                              "con programas integrales de atención sanitaria que incluyan salud mental, nutrición, salud sexual y reproductiva y estén protegidos contra la \n"+
+                                                              "violencia psicológica, sexual y de género.");
+                break;
+            case "Selva":
+                if(departamento == "Loreto")txtInfo.setText("En la actualidad, en Loreto viven 409,026 niñas, niños y adolescentes, que representan el 38n \n"+    
+                                                              "del total de la población en el departamento. Para el 2021, se estima que el 41.5% de la niñez y \n"+ 
+                                                              "adolescencia de esta región se encontraba en situación de pobreza \n"+
+ 
+                                                              "En el caso de la desnutrición crónica, el promedio nacional es de 11.7% pero en esta región, alcanza al \n"+
+                                                              "21.7%. Otra de las cifras que lleva a este compromiso es el referido a la vacunación en niños y niñas \n"+
+                                                              "menores de un año. A nivel nacional la cifra es de 69.6%, pero en Loreto baja a 49.1%, convirtiéndose \n"+
+                                                              "en la segunda región, después de Puno, en tener el índice más bajo de vacunación. Sobre agua y \n"+
+                                                              "saneamiento, de acuerdo con el Censo Escolar del Ministerio de Educación 2022, las escuelas públicas \n"+
+                                                              "con los tres servicios básicos: agua, desagüe y electricidad llega a nivel nacional a 29.2% mientras que \n"+
+                                                              "en Loreto apenas cuentan con estos servicios básicos el 6.1% de las escuelas. \n"+
+ 
+                                                              "En el caso de las y los adolescentes, que representan el 33% de la población, la declaración firmada \n"+
+                                                              "permitirá trabajar para que ellos y ellas cuenten con programas integrales de atención sanitaria que \n"+
+                                                              "incluyan salud mental, nutrición, salud sexual y reproductiva y estén protegidos contra la violencia \n"+
+                                                              "psicológica, sexual y de género.");
+                break;
+            default:
+                throw new AssertionError();
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cmbDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDepartamentoActionPerformed
+        String rDepartamento="images/"+cmbDepartamento.getSelectedItem().toString()+".jpg";
+       verfoto(lblDepartamento, rDepartamento);
+    }//GEN-LAST:event_cmbDepartamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,6 +272,18 @@ public class frmCasoSocial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JComboBox<String> cmbDepartamento;
+    private javax.swing.JComboBox<String> cmbRegiones;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblCaso;
+    private javax.swing.JLabel lblDepartamento;
+    private javax.swing.JTextArea txtInfo;
     // End of variables declaration//GEN-END:variables
 }
