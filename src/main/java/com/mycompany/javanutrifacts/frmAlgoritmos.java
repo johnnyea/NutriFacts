@@ -109,11 +109,12 @@ void verfoto (JLabel imagen,String cad){
         }
         catch (Exception ex) {
             msg("Error "+ex.getMessage());
+        }
     }//GEN-LAST:event_btnejecutarActionPerformed
 
     private void btnretornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnretornarActionPerformed
         // TODO add your handling code here:
-         msg("Gracias x usar el tutor de algoritmos");
+        msg("Gracias x usar el tutor de algoritmos");
         this.dispose();
     }//GEN-LAST:event_btnretornarActionPerformed
 
