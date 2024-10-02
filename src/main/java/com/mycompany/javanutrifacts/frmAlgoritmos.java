@@ -23,7 +23,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         initComponents();
         this.setTitle("NUTRIFACTS");
         this.setLocationRelativeTo(this);
-         verfoto(lblfondo, "FONDO3.jpg");
+        verfoto(lblfondo, "images/FONDO3.jpg");
     }
 
     /**
@@ -87,13 +87,14 @@ public class frmAlgoritmos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-void verfoto (JLabel imagen,String cad){
+    void verfoto (JLabel imagen,String cad){
         int ancho =imagen.getWidth();
         int alto =imagen.getHeight();
         ImageIcon foto=new ImageIcon(cad);
         Icon icono=new ImageIcon(foto.getImage().getScaledInstance(ancho,alto,Image.SCALE_DEFAULT));
         imagen.setIcon(icono);
     }
+    
     void msg (String msg){
         JOptionPane.showMessageDialog(null, msg);
     }
