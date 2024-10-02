@@ -58,6 +58,7 @@ public class frmCasoSocial extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(720, 720));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setFont(new java.awt.Font("Tw Cen MT", 3, 14)); // NOI18N
         jButton1.setText("Retornar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,20 +75,25 @@ public class frmCasoSocial extends javax.swing.JFrame {
         lblCaso.setPreferredSize(new java.awt.Dimension(150, 150));
         getContentPane().add(lblCaso, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
+        txtInfo.setBackground(new java.awt.Color(204, 204, 255));
         txtInfo.setColumns(20);
+        txtInfo.setForeground(new java.awt.Color(0, 153, 102));
         txtInfo.setRows(5);
+        txtInfo.setWrapStyleWord(true);
+        txtInfo.setDisabledTextColor(new java.awt.Color(0, 255, 102));
         jScrollPane1.setViewportView(txtInfo);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 370, 420));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 2, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Caso Social: Desnutricion en el Perú");
         jLabel3.setMaximumSize(new java.awt.Dimension(300, 40));
         jLabel3.setMinimumSize(new java.awt.Dimension(300, 40));
         jLabel3.setPreferredSize(new java.awt.Dimension(300, 40));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 380, -1));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Seleccione Caso"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmbRegiones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione--", "Costa", "Sierra", "Selva" }));
@@ -106,6 +112,8 @@ public class frmCasoSocial extends javax.swing.JFrame {
         });
         jPanel1.add(cmbDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
 
+        btnLimpiar.setBackground(new java.awt.Color(255, 102, 102));
+        btnLimpiar.setFont(new java.awt.Font("Tw Cen MT", 3, 12)); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,12 +122,16 @@ public class frmCasoSocial extends javax.swing.JFrame {
         });
         jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 2, 12)); // NOI18N
         jLabel4.setText("Region");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 2, 14)); // NOI18N
         jLabel5.setText("Departamento");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(153, 153, 255));
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 3, 12)); // NOI18N
         jButton2.setText("Buscar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
