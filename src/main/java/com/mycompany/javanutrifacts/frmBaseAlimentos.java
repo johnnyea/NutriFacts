@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -35,6 +36,8 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         DisenoTabla();
         Font();
         insertaIconos();
+        
+        verfotoLogo(lblLogo, "images/NUTRIFACTS.gif");
     }
 
     /**
@@ -54,6 +57,7 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         lblAlimento = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        lblLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(720, 720));
@@ -123,6 +127,7 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 410, 180));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 650, 230));
+        getContentPane().add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 140, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,6 +144,12 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
 
     void msg (String msg){
         JOptionPane.showMessageDialog(null, msg);
+    }
+    
+    void verfotoLogo (JLabel imagen,String cad){
+        ImageIcon foto=new ImageIcon(cad);
+        Icon icono=new ImageIcon(foto.getImage().getScaledInstance(150,69,Image.SCALE_DEFAULT));
+        imagen.setIcon(icono);
     }
     
     /**
@@ -215,6 +226,7 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblAlimento;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }
