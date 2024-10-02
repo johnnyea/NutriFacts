@@ -4,6 +4,10 @@
  */
 package com.mycompany.javanutrifacts;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +23,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         initComponents();
         this.setTitle("NUTRIFACTS");
         this.setLocationRelativeTo(this);
+         verfoto(lblfondo, "FONDO3.jpg");
     }
 
     /**
@@ -30,45 +35,87 @@ public class frmAlgoritmos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        lblfondos = new javax.swing.JLabel();
+        lblfondo = new javax.swing.JLabel();
+        btnejecutar = new javax.swing.JButton();
+        btnretornar = new javax.swing.JButton();
+        cbocasos = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        cbosemanas = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnejecutar.setBackground(new java.awt.Color(255, 255, 255));
+        btnejecutar.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        btnejecutar.setForeground(new java.awt.Color(0, 102, 102));
+        btnejecutar.setText("EJECUTAR");
+        btnejecutar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnejecutarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnejecutar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(317, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        btnretornar.setBackground(new java.awt.Color(255, 255, 255));
+        btnretornar.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        btnretornar.setForeground(new java.awt.Color(0, 102, 102));
+        btnretornar.setText("RETORNAR");
+        btnretornar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnretornarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnretornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
+
+        cbocasos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CASO 1", "CASO 2", "CASO 3", "CASO 4", "CASO 5", "CASO 6", "CASO 7", "CASO 8", "CASO 9", " " }));
+        getContentPane().add(cbocasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 90, -1));
+
+        jLabel2.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("SEMANA");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
+
+        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA 1", "SEMANA 2", "SEMANA 3", "SEMANA 4", "SEMANA 5", "SEMANA 6", "SEMANA 7", "SEMANA 8", "SEMANA 9", " " }));
+        getContentPane().add(cbosemanas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, -1));
+
+        jLabel1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CASO");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 50, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+void verfoto (JLabel imagen,String cad){
+        int ancho =imagen.getWidth();
+        int alto =imagen.getHeight();
+        ImageIcon foto=new ImageIcon(cad);
+        Icon icono=new ImageIcon(foto.getImage().getScaledInstance(ancho,alto,Image.SCALE_DEFAULT));
+        imagen.setIcon(icono);
+    }
     void msg (String msg){
         JOptionPane.showMessageDialog(null, msg);
     }
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        msg("Esta saliendo de la base de ejercicios de algoritmos...");
+    private void btnejecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnejecutarActionPerformed
+       // TODO add your handling code here:
+        String nom="";
+        nom=cbosemanas.getSelectedItem().toString()+"_"+cbocasos.getSelectedItem().toString()+".psc";
+        System.out.println(nom);
+        try{
+            String conexion=nom;
+            Process p=Runtime.getRuntime().exec("cmd.exe /C start "+conexion);
+        }
+        catch (Exception ex) {
+            msg("Error "+ex.getMessage());
+    }//GEN-LAST:event_btnejecutarActionPerformed
+
+    private void btnretornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnretornarActionPerformed
+        // TODO add your handling code here:
+         msg("Gracias x usar el tutor de algoritmos");
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnretornarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,6 +153,13 @@ public class frmAlgoritmos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnejecutar;
+    private javax.swing.JButton btnretornar;
+    private javax.swing.JComboBox<String> cbocasos;
+    private javax.swing.JComboBox<String> cbosemanas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblfondo;
+    private javax.swing.JLabel lblfondos;
     // End of variables declaration//GEN-END:variables
 }
