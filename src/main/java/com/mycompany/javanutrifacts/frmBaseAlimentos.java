@@ -7,6 +7,9 @@ package com.mycompany.javanutrifacts;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -23,6 +26,15 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
 
     
     DefaultTableModel modelo = new DefaultTableModel();
+    
+    
+    //Conexion Base de Datos
+    private static Connection con;
+    // Declaramos los datos de conexion a la bd
+    private static final String driver="com.mysql.jdbc.Driver";
+    private static final String user="root";
+    private static final String pass="";
+    private static final String url="jdbc:mysql://localhost/nutrifacts";
     
     public frmBaseAlimentos() {
         initComponents();
@@ -188,6 +200,23 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         Icon iRetornar = new ImageIcon(rRetornar.getImage().getScaledInstance(35,35,Image.SCALE_DEFAULT));
         btnNuevoAlimento.setIcon(iGuardar);
         btnRetornar.setIcon(iRetornar);
+    }
+    
+    //Logica de conexion
+    public void conector() throws SQLException {
+        // Reseteamos a null la conexion a la bd
+        con=null;
+        try{
+            Class.forName(driver);
+            // Nos conectamos a la bd
+            con= (Connection) DriverManager.getConnection(url, user, pass);
+            // Si la conexion fue exitosa mostramos un mensaje de conexion exitosa
+            
+        }
+        // Si la conexion NO fue exitosa mostramos un mensaje de error
+        catch (ClassNotFoundException | SQLException e){
+            System.out.println("Error de conexion" + e);
+        }
     }
     
     public static void main(String args[]) {
