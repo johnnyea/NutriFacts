@@ -4,6 +4,10 @@
  */
 package com.mycompany.javanutrifacts;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +22,9 @@ public class frmMenu extends javax.swing.JFrame {
     public frmMenu() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setTitle("NUTRIFACTS");
+        verfoto(lblFondo,"images/NUTRIFACTS.gif");
+        
     }
 
     /**
@@ -29,6 +36,7 @@ public class frmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mniBaseAlimentos = new javax.swing.JMenuItem();
@@ -131,11 +139,13 @@ public class frmMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(lblFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lblFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,6 +153,14 @@ public class frmMenu extends javax.swing.JFrame {
 
     void msg(String m){
     JOptionPane.showMessageDialog(null, m);
+    }
+    
+    void verfoto (JLabel imagen,String cad){
+        int ancho =imagen.getWidth();
+        int alto =imagen.getHeight();
+        ImageIcon foto=new ImageIcon(cad);
+        Icon icono=new ImageIcon(foto.getImage().getScaledInstance(ancho,alto,Image.SCALE_DEFAULT));
+        imagen.setIcon(icono);
     }
     
     private void mniBaseAlimentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniBaseAlimentosActionPerformed
@@ -206,6 +224,7 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JLabel lblFondo;
     private javax.swing.JMenuItem mniBaseAlimentos;
     private javax.swing.JMenuItem mniRegistroAlimentos;
     // End of variables declaration//GEN-END:variables

@@ -6,6 +6,9 @@ package com.mycompany.javanutrifacts;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -29,6 +32,9 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         String[] titulo={"NOMBRE","CLASIFICACION","ORIGEN","BENEFICIOS","RECOMENDACIONES","PREPARACION"};
         modelo.setColumnIdentifiers(titulo);
         tblDatos.setModel(modelo);
+        DisenoTabla();
+        Font();
+        insertaIconos();
     }
 
     /**
@@ -42,10 +48,23 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnRetornar = new javax.swing.JButton();
+        btnNuevoAlimento = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblAlimento = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(720, 720));
+        setMinimumSize(new java.awt.Dimension(720, 720));
+        setPreferredSize(new java.awt.Dimension(720, 720));
+        setSize(new java.awt.Dimension(720, 720));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane1.setMaximumSize(new java.awt.Dimension(400, 400));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(400, 400));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(400, 400));
 
         tblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -58,51 +77,65 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblDatos.setAutoscrolls(false);
+        tblDatos.setMaximumSize(new java.awt.Dimension(490, 100));
+        tblDatos.setMinimumSize(new java.awt.Dimension(490, 100));
+        tblDatos.setPreferredSize(new java.awt.Dimension(490, 100));
         jScrollPane1.setViewportView(tblDatos);
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 25, 500, -1));
+
+        btnRetornar.setText("RETORNAR");
+        btnRetornar.setMaximumSize(new java.awt.Dimension(150, 50));
+        btnRetornar.setMinimumSize(new java.awt.Dimension(150, 50));
+        btnRetornar.setPreferredSize(new java.awt.Dimension(150, 50));
+        btnRetornar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRetornarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRetornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, -1, -1));
 
-        jButton2.setText("jButton2");
+        btnNuevoAlimento.setText("NUEVO");
+        btnNuevoAlimento.setMaximumSize(new java.awt.Dimension(150, 50));
+        btnNuevoAlimento.setMinimumSize(new java.awt.Dimension(150, 50));
+        btnNuevoAlimento.setPreferredSize(new java.awt.Dimension(150, 50));
+        btnNuevoAlimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoAlimentoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnNuevoAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 25, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addGap(20, 20, 20))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "VER ALIMENTO", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblAlimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblAlimento.setMaximumSize(new java.awt.Dimension(250, 250));
+        lblAlimento.setMinimumSize(new java.awt.Dimension(250, 250));
+        lblAlimento.setPreferredSize(new java.awt.Dimension(250, 250));
+        jPanel1.add(lblAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 180, 180));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 410, 180));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 650, 230));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRetornarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetornarActionPerformed
         msg("Esta saliendo de la base de datos de alimentos...");
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRetornarActionPerformed
+
+    private void btnNuevoAlimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoAlimentoActionPerformed
+        frmRegistroAlimentos fra = new frmRegistroAlimentos();
+        fra.setVisible(true);
+    }//GEN-LAST:event_btnNuevoAlimentoActionPerformed
 
     void msg (String msg){
         JOptionPane.showMessageDialog(null, msg);
@@ -113,14 +146,14 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
      */
     
     void DisenoTabla(){
-        tblDatos.getTableHeader().setFont(new Font("SansSerif", Font.BOLD, 14));
+        tblDatos.getTableHeader().setFont(new Font("SansSerif", Font.BOLD, 10));
         
         tblDatos.getColumnModel().getColumn(0).setPreferredWidth(40);
         tblDatos.getColumnModel().getColumn(1).setPreferredWidth(80);
         tblDatos.getColumnModel().getColumn(2).setPreferredWidth(40);
-        tblDatos.getColumnModel().getColumn(3).setPreferredWidth(100);
-        tblDatos.getColumnModel().getColumn(4).setPreferredWidth(120);
-        tblDatos.getColumnModel().getColumn(5).setPreferredWidth(100);
+        tblDatos.getColumnModel().getColumn(3).setPreferredWidth(60);
+        tblDatos.getColumnModel().getColumn(4).setPreferredWidth(100);
+        tblDatos.getColumnModel().getColumn(5).setPreferredWidth(80);
         
         DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
         renderer.setHorizontalAlignment(SwingConstants.CENTER);
@@ -131,8 +164,21 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         tblDatos.getColumnModel().getColumn(4).setCellRenderer(renderer);
         tblDatos.getColumnModel().getColumn(5).setCellRenderer(renderer);
         
-        tblDatos.getTableHeader().setForeground(new Color(0,102,102));
     }
+    void Font(){
+        btnNuevoAlimento.setFont(new Font("SansSerif", Font.BOLD, 11));
+        btnRetornar.setFont(new Font("SansSerif", Font.BOLD, 11));
+    }
+    
+    void insertaIconos(){
+        ImageIcon rGuardar = new ImageIcon("icons/Guardar.png");
+        ImageIcon rRetornar = new ImageIcon("icons/Retornar.png");
+        Icon iGuardar = new ImageIcon(rGuardar.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT));
+        Icon iRetornar = new ImageIcon(rRetornar.getImage().getScaledInstance(35,35,Image.SCALE_DEFAULT));
+        btnNuevoAlimento.setIcon(iGuardar);
+        btnRetornar.setIcon(iRetornar);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -162,9 +208,13 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnNuevoAlimento;
+    private javax.swing.JButton btnRetornar;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblAlimento;
     private javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
 }
