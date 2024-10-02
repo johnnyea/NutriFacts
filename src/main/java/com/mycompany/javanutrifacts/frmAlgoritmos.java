@@ -76,7 +76,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         jLabel2.setText("SEMANA");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
-        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA 1", "SEMANA 2", "SEMANA 3", "SEMANA 4", "SEMANA 5", "SEMANA 6", "SEMANA 7", "SEMANA 8", "SEMANA 9", " " }));
+        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA 1", "SEMANA 2", "SEMANA 3", "SEMANA 4", "SEMANA 5", "SEMANA 6", "SEMANA 7", "SEMANA 8", "SEMANA 9", "" }));
         getContentPane().add(cbosemanas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, -1));
 
         jLabel1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
@@ -103,10 +103,11 @@ public class frmAlgoritmos extends javax.swing.JFrame {
        // TODO add your handling code here:
         String nom="";
         nom=cbosemanas.getSelectedItem().toString()+"_"+cbocasos.getSelectedItem().toString()+".psc";
+        nom=nom.toLowerCase();
         System.out.println(nom);
         try{
             String conexion=nom;
-            Process p=Runtime.getRuntime().exec("cmd.exe /C start "+conexion);
+            Process p=Runtime.getRuntime().exec("cmd.exe /algoritmo start "+conexion);
         }
         catch (Exception ex) {
             msg("Error "+ex.getMessage());
