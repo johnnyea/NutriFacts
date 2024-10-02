@@ -23,7 +23,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         initComponents();
         this.setTitle("NUTRIFACTS");
         this.setLocationRelativeTo(this);
-        verfoto(lblfondo, "images/FONDO3.jpg");
+        verfoto(lblfondo, "algoritmo/FONDO3.jpg");
     }
 
     /**
@@ -35,14 +35,13 @@ public class frmAlgoritmos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblfondos = new javax.swing.JLabel();
-        lblfondo = new javax.swing.JLabel();
         btnejecutar = new javax.swing.JButton();
         btnretornar = new javax.swing.JButton();
         cbocasos = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         cbosemanas = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
+        lblfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -84,6 +83,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CASO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 50, 20));
+        getContentPane().add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +162,5 @@ public class frmAlgoritmos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblfondo;
-    private javax.swing.JLabel lblfondos;
     // End of variables declaration//GEN-END:variables
 }
