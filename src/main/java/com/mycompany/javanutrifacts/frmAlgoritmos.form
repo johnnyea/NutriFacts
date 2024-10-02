@@ -124,7 +124,7 @@
             <StringItem index="6" value="SEMANA 7"/>
             <StringItem index="7" value="SEMANA 8"/>
             <StringItem index="8" value="SEMANA 9"/>
-            <StringItem index="9" value=" "/>
+            <StringItem index="9" value=""/>
           </StringArray>
         </Property>
       </Properties>
