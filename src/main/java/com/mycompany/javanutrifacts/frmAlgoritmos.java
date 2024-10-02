@@ -68,7 +68,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         });
         getContentPane().add(btnretornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
 
-        cbocasos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CASO 1", "CASO 2", "CASO 3", "CASO 4", "CASO 5", "CASO 6", "CASO 7", "CASO 8", "CASO 9", " " }));
+        cbocasos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CASO1", "CASO2", "CASO3", "CASO4", "CASO5", "CASO6", "CASO7", "CASO8", "CASO9", " " }));
         getContentPane().add(cbocasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 90, -1));
 
         jLabel2.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
@@ -76,7 +76,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         jLabel2.setText("SEMANA");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
-        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA 1", "SEMANA 2", "SEMANA 3", "SEMANA 4", "SEMANA 5", "SEMANA 6", "SEMANA 7", "SEMANA 8", "SEMANA 9", "" }));
+        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA1", "SEMANA2", "SEMANA3", "SEMANA4", "SEMANA5", "SEMANA6", "SEMANA7", "SEMANA8", "SEMANA9", " " }));
         getContentPane().add(cbosemanas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, -1));
 
         jLabel1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
