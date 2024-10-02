@@ -77,6 +77,11 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
         cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA1", "SEMANA2", "SEMANA3", "SEMANA4", "SEMANA5", "SEMANA6", "SEMANA7", "SEMANA8", "SEMANA9", " " }));
+        cbosemanas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbosemanasActionPerformed(evt);
+            }
+        });
         getContentPane().add(cbosemanas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, -1));
 
         jLabel1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
@@ -103,11 +108,10 @@ public class frmAlgoritmos extends javax.swing.JFrame {
        // TODO add your handling code here:
         String nom="";
         nom=cbosemanas.getSelectedItem().toString()+"_"+cbocasos.getSelectedItem().toString()+".psc";
-        nom=nom.toLowerCase();
         System.out.println(nom);
         try{
             String conexion=nom;
-            Process p=Runtime.getRuntime().exec("cmd.exe /algoritmo start "+conexion);
+            Process Process = Runtime.getRuntime().exec("cmd.exe /C start "+conexion);
         }
         catch (Exception ex) {
             msg("Error "+ex.getMessage());
@@ -119,6 +123,10 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         msg("Gracias x usar el tutor de algoritmos");
         this.dispose();
     }//GEN-LAST:event_btnretornarActionPerformed
+
+    private void cbosemanasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbosemanasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbosemanasActionPerformed
 
     /**
      * @param args the command line arguments
