@@ -31,8 +31,21 @@ public class frmRegistroUsuarios extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        lblTitulo = new javax.swing.JLabel();
+        lblnombre = new javax.swing.JLabel();
+        lblapellido = new javax.swing.JLabel();
+        lblcorreo = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
+        txtapellido = new javax.swing.JTextField();
+        txtcorreo = new javax.swing.JTextField();
+        txtcontraseña = new javax.swing.JTextField();
+        cmbtipousuario = new javax.swing.JComboBox<>();
+        lblcontraseña = new javax.swing.JLabel();
+        btnCrear = new javax.swing.JButton();
+        txttipousuario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Retornar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -40,23 +53,51 @@ public class frmRegistroUsuarios extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 266, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(315, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
+        lblTitulo.setText("Formulario de Registro");
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, 20));
+
+        lblnombre.setText("Nombre");
+        getContentPane().add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 66, -1, 20));
+
+        lblapellido.setText("Apellido");
+        getContentPane().add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
+
+        lblcorreo.setText("Correo");
+        getContentPane().add(lblcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        txtnombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 130, -1));
+        getContentPane().add(txtapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 130, -1));
+        getContentPane().add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 130, -1));
+        getContentPane().add(txtcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 130, -1));
+
+        cmbtipousuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbtipousuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbtipousuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cmbtipousuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        lblcontraseña.setText("Contraseña");
+        getContentPane().add(lblcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+
+        btnCrear.setText("Crear");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+
+        txttipousuario.setText("Tipo de Usuario");
+        getContentPane().add(txttipousuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -69,6 +110,35 @@ public class frmRegistroUsuarios extends javax.swing.JFrame {
         msg("Gracias por usar el registro de usuarios");
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+    String nombre=txtnombre.getText();
+    String apellido=txtapellido.getText();
+    String correo=txtcorreo.getText();
+    String contraseña=txtcontraseña.getText();
+    String tipousuario=cmbtipousuario.getSelectedItem().toString();
+    
+    if(nombre.isEmpty()||apellido.isEmpty()||correo.isEmpty()||contraseña.isEmpty()){
+        JOptionPane.showMessageDialog(null, "DEBE COMPLETAR LOS DATOS");
+    }else{
+        if(tipousuario.equalsIgnoreCase("Seleccionar")){
+        JOptionPane.showMessageDialog(null, "DEBE DE SELECCIONAR UN TIPO DE USUARIO");    
+        }else{
+            try {
+                String consulta="";
+            } catch (Exception e){
+            }
+        }
+    }
+    }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnombreActionPerformed
+
+    private void cmbtipousuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbtipousuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbtipousuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,6 +176,18 @@ public class frmRegistroUsuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCrear;
+    private javax.swing.JComboBox<String> cmbtipousuario;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblapellido;
+    private javax.swing.JLabel lblcontraseña;
+    private javax.swing.JLabel lblcorreo;
+    private javax.swing.JLabel lblnombre;
+    private javax.swing.JTextField txtapellido;
+    private javax.swing.JTextField txtcontraseña;
+    private javax.swing.JTextField txtcorreo;
+    private javax.swing.JTextField txtnombre;
+    private javax.swing.JLabel txttipousuario;
     // End of variables declaration//GEN-END:variables
 }
