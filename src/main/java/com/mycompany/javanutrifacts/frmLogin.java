@@ -88,9 +88,9 @@ public class frmLogin extends javax.swing.JFrame {
         String Usuario = jcmbnombre.getSelectedItem().toString()+".jpg";
         String Password = jPasswordField1.getText();
         
-        if(Usuario.isEmpty())(Password.isEmtpy()){
+        //if(Usuario.isEmpty())(Password.isEmtpy()){
         
-    }
+    //}
     }//GEN-LAST:event_jbtniniciarActionPerformed
     
     public static void main(String args[]) {
