@@ -8,6 +8,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.geom.RoundRectangle2D;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,6 +28,7 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
      * Creates new form frmRegistroAlimentos
      */
     DefaultTableModel modelo=new DefaultTableModel();
+
     
     public frmRegistroAlimentos() {
         initComponents();
@@ -36,10 +40,6 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         insertaIconos();
         Limpiar();
         Font();
-        
-        
-        
-        
         
     }
 
@@ -301,6 +301,8 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         String recomendaciones=txtRecomendaciones.getText();
         String preparacion=txtPreparacion.getText();
         
+        
+        
         Limpiar();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -387,6 +389,9 @@ public class frmRegistroAlimentos extends javax.swing.JFrame {
         jPanel2.setFont(new Font("SansSerif", Font.BOLD, 12));
         jPanel3.setFont(new Font("SansSerif", Font.BOLD, 12));
     }
+    
+    
+    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
