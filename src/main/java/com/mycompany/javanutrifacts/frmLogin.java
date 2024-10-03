@@ -4,6 +4,12 @@
  */
 package com.mycompany.javanutrifacts;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author johnn
@@ -17,6 +23,7 @@ public class frmLogin extends javax.swing.JFrame {
         initComponents();
         this.setTitle("NUTRIFACTS");
         this.setLocationRelativeTo(this);
+        lblintentos.setText(""+intentos);
     }
 
     /**
@@ -30,12 +37,13 @@ public class frmLogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jlblbienvenido = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         jlblpassword = new javax.swing.JLabel();
-        jlblusuario = new javax.swing.JLabel();
-        jcmbnombre = new javax.swing.JComboBox<>();
-        jlblfoto = new javax.swing.JLabel();
-        jbtniniciar = new javax.swing.JButton();
+        lblusuario = new javax.swing.JLabel();
+        cbmnombre = new javax.swing.JComboBox<>();
+        lblfoto = new javax.swing.JLabel();
+        btniniciar = new javax.swing.JButton();
+        lblintentos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VENTANA DE INICIO DE SESION");
@@ -52,46 +60,77 @@ public class frmLogin extends javax.swing.JFrame {
         jlblbienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jlblbienvenido.setText("Bienvenido");
         jPanel1.add(jlblbienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 140, -1));
-
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 120, -1));
 
         jlblpassword.setText("Password");
         jPanel1.add(jlblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
-        jlblusuario.setText("Usuario");
-        jPanel1.add(jlblusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        lblusuario.setText("Usuario");
+        jPanel1.add(lblusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        jcmbnombre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jcmbnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
-
-        jlblfoto.setText("jLabel3");
-        jPanel1.add(jlblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 120, 160));
-
-        jbtniniciar.setText("Iniciar Sesion");
-        jbtniniciar.addActionListener(new java.awt.event.ActionListener() {
+        cbmnombre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Johnny Espinoza", "Lelis Hurtado", "Older Ozambela" }));
+        cbmnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtniniciarActionPerformed(evt);
+                cbmnombreActionPerformed(evt);
             }
         });
-        jPanel1.add(jbtniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+        jPanel1.add(cbmnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, -1, -1));
+
+        lblfoto.setToolTipText("");
+        lblfoto.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 120, 160));
+
+        btniniciar.setText("Iniciar Sesion");
+        btniniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btniniciarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+
+        lblintentos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Te quedan intentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 102, 0))); // NOI18N
+        jPanel1.add(lblintentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 130, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 540, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbtniniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtniniciarActionPerformed
+    void verfoto (JLabel imagen,String cad){
+        int ancho =imagen.getWidth();
+        int alto =imagen.getHeight();
+        ImageIcon foto=new ImageIcon(cad);
+        Icon icono=new ImageIcon(foto.getImage().getScaledInstance(ancho,alto,Image.SCALE_DEFAULT));
+        imagen.setIcon(icono);
+    }
+    int intentos=3;
+void msg(String m){
+    JOptionPane.showMessageDialog(null, m);
+}
+    private void btniniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarActionPerformed
         frmMenu fm = new frmMenu();
-        fm.setVisible(true);
-        this.setVisible(false);
-        String Usuario = jcmbnombre.getSelectedItem().toString()+".jpg";
-        String Password = jPasswordField1.getText();
+        String Usuario = cbmnombre.getSelectedItem().toString()+".jpg";
+        String Password = txtPassword.getText().toString();
         
-        //if(Usuario.isEmpty())(Password.isEmtpy()){
-        
-    //}
-    }//GEN-LAST:event_jbtniniciarActionPerformed
+        if(Password.equalsIgnoreCase("123")){
+        frmMenu fx=new frmMenu();
+        msg("Bienvenidos al Sistema de Registro NutriFacts");
+        fx.setVisible(true);
+        this.dispose();
+    } else {
+        intentos--;
+        lblintentos.setText(""+intentos);
+        msg("CLAVE INCORRECTA POR FAVOR INTENTE DE NUEVO \n INTENTOS RESTANTES : "+intentos);
+        if (intentos==0) {
+            msg("Se agotaron tus intentos. Usuario No autorizado");
+            System.exit(0);
+        }
+     }
+    }//GEN-LAST:event_btniniciarActionPerformed
+
+    private void cbmnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbmnombreActionPerformed
+    String nom=cbmnombre.getSelectedItem().toString()+".jpg";
+        verfoto(lblfoto, nom);        // TODO add your handling code here:        // TODO add your handling code here:
+    }//GEN-LAST:event_cbmnombreActionPerformed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -126,13 +165,14 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btniniciar;
+    private javax.swing.JComboBox<String> cbmnombre;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JButton jbtniniciar;
-    private javax.swing.JComboBox<String> jcmbnombre;
     private javax.swing.JLabel jlblbienvenido;
-    private javax.swing.JLabel jlblfoto;
     private javax.swing.JLabel jlblpassword;
-    private javax.swing.JLabel jlblusuario;
+    private javax.swing.JLabel lblfoto;
+    private javax.swing.JLabel lblintentos;
+    private javax.swing.JLabel lblusuario;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }
