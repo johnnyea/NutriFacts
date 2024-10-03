@@ -68,7 +68,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         });
         getContentPane().add(btnretornar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
 
-        cbocasos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CASO1", "CASO2", "CASO3", "CASO4", "CASO5", "CASO6", "CASO7", "CASO8", "CASO9", " " }));
+        cbocasos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "caso1", "caso2", "caso3", "caso4", "caso5", "caso6", "caso7", "caso8", " ", " ", " " }));
         getContentPane().add(cbocasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 90, -1));
 
         jLabel2.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
@@ -76,7 +76,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         jLabel2.setText("SEMANA");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
-        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEMANA1", "SEMANA2", "SEMANA3", "SEMANA4", "SEMANA5", "SEMANA6", "SEMANA7", "SEMANA8", "SEMANA9", " " }));
+        cbosemanas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "semana2", "semana3", "semana4", "semana5", "semana6", "semana7", "semana8", " ", " " }));
         cbosemanas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbosemanasActionPerformed(evt);
@@ -88,7 +88,7 @@ public class frmAlgoritmos extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CASO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 50, 20));
-        getContentPane().add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 350));
+        getContentPane().add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 620, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
