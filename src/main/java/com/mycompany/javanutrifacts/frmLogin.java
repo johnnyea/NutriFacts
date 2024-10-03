@@ -19,6 +19,7 @@ public class frmLogin extends javax.swing.JFrame {
     /**
      * Creates new form frmLogin
      */
+    public static frmregistrousuarios fr;
     public frmLogin() {
         initComponents();
         this.setTitle("NUTRIFACTS");
@@ -44,6 +45,7 @@ public class frmLogin extends javax.swing.JFrame {
         lblfoto = new javax.swing.JLabel();
         btniniciar = new javax.swing.JButton();
         lblintentos = new javax.swing.JLabel();
+        btnregistro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VENTANA DE INICIO DE SESION");
@@ -86,10 +88,18 @@ public class frmLogin extends javax.swing.JFrame {
                 btniniciarActionPerformed(evt);
             }
         });
-        jPanel1.add(btniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+        jPanel1.add(btniniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
         lblintentos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Te quedan intentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 102, 0))); // NOI18N
         jPanel1.add(lblintentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 130, 70));
+
+        btnregistro.setText("Registro");
+        btnregistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnregistroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 540, 380));
 
@@ -131,6 +141,13 @@ void msg(String m){
     String nom=cbmnombre.getSelectedItem().toString()+".jpg";
         verfoto(lblfoto, nom);        // TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_cbmnombreActionPerformed
+
+    private void btnregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregistroActionPerformed
+     frmregistrousuarios frm=new frmregistrousuarios();
+     frm.setVisible(true);
+     dispose();
+     
+    }//GEN-LAST:event_btnregistroActionPerformed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -166,6 +183,7 @@ void msg(String m){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btniniciar;
+    private javax.swing.JButton btnregistro;
     private javax.swing.JComboBox<String> cbmnombre;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlblbienvenido;
