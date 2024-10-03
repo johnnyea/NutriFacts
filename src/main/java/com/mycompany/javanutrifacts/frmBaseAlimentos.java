@@ -29,12 +29,7 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
     
     
     //Conexion Base de Datos
-    private static Connection con;
-    // Declaramos los datos de conexion a la bd
-    private static final String driver="com.mysql.jdbc.Driver";
-    private static final String user="root";
-    private static final String pass="";
-    private static final String url="jdbc:mysql://localhost/nutrifacts";
+    
     
     public frmBaseAlimentos() {
         initComponents();
@@ -48,7 +43,6 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
         DisenoTabla();
         Font();
         insertaIconos();
-        
         verfotoLogo(lblLogo, "images/NUTRIFACTS.gif");
     }
 
@@ -203,21 +197,6 @@ public class frmBaseAlimentos extends javax.swing.JFrame {
     }
     
     //Logica de conexion
-    public void conector() throws SQLException {
-        // Reseteamos a null la conexion a la bd
-        con=null;
-        try{
-            Class.forName(driver);
-            // Nos conectamos a la bd
-            con= (Connection) DriverManager.getConnection(url, user, pass);
-            // Si la conexion fue exitosa mostramos un mensaje de conexion exitosa
-            
-        }
-        // Si la conexion NO fue exitosa mostramos un mensaje de error
-        catch (ClassNotFoundException | SQLException e){
-            System.out.println("Error de conexion" + e);
-        }
-    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
